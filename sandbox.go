@@ -5,7 +5,7 @@
 
 // +build !linux !sandbox
 
-package main
+package gonzofilter
 
 func sandbox_me(debug bool) {
     // no-op on non-Linux OS

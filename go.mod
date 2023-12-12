@@ -1,4 +1,4 @@
-module github.com/gsauthof/gonzofilter
+module github.com/Jumas-Cola/gonzofilter
 
 go 1.15
 

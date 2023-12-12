@@ -14,20 +14,26 @@ See the short `toe.py` script for details.
 
 To classify new messages:
 
-    $ ./gonzofilter -check -in path/to/maildir/msg
-    $ echo $?
+```go
+package main
 
-The exit status 10 stands for a 'ham' classification result while
-11 stands for 'spam'.
+import (
+	"fmt"
 
-For integration with a mail-delivery-agent it also supports a
-pass-through mode (cf. the `-pass` option).
+	gonzofilter "github.com/Jumas-Cola/gonzofilter"
+)
 
-To just use it as tokenizer:
+func main() {
+	msg := `
+        Some Message To Check
+    `
 
-    $ ./gonzofilter -dump-mark -in path/to/maildir/msg
+	res := gonzofilter.ClassifyMessage(msg, "hamspam.db")
 
-See also `-h` for additional commands and options.
+	fmt.Println(res) // SPAM or HAM
+}
+
+```
 
 ## Classification Performance
 

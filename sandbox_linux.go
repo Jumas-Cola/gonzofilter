@@ -3,7 +3,7 @@
 
 // +build sandbox
 
-package main
+package gonzofilter
 
 // This sandboxing is meant as a defence-in-depth measure.
 // Meaning that since Go is a memory safe language an attacker

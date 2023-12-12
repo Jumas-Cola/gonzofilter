@@ -1,7 +1,7 @@
 // 2019, Georg Sauthoff <mail@gms.tf>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-package main
+package gonzofilter
 
 const min_word_len   = 4
 // use a relatively high value to also get some URLs
