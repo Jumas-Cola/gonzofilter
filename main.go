@@ -41,7 +41,7 @@ func ClassifyMessage(message string, db_filename string) string {
 	a := new(args)
 	a.SetDbFilename(db_filename)
 	in := strings.NewReader(message)
-	is_ham, err := classify_file(in, args)
+	is_ham, err := classify_file(in, a)
 	if err != nil {
 		log.Fatal(err)
 	}
