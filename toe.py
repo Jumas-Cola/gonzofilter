@@ -60,7 +60,7 @@ def toe():
     ham_msg_cnt = 0
     spam_msg_cnt = 0
 
-    for i in range(50):
+    for i in range(min(len(hams), len(spams))):
         ham_msg_cnt += 1
         learn(hams.pop())
         spam_msg_cnt += 1
